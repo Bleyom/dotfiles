@@ -1,0 +1,57 @@
+Xft.antialias:    1
+Xft.hinting:    1
+Xft.autohint:    0
+Xft.hintstyle:    hintslight
+Xft.rgba:    rgb
+Xft.lcdfilter:    lcddefault
+
+! window padding
+st.borderpx: 25
+
+!-- values between 0.1  - 1.0 --! 
+
+st.alpha: 1.0 
+st.font: Caskaydia Cove Nerd Font:size=12
+
+!-- ok palette --!
+#define ok_darker_bg   #06080b
+#define ok_bg          #0b0d10
+#define ok_contrast_bg #101215
+#define ok_lighter_bg  #1a1c1f
+#define ok_fg          #d2daf4
+#define ok_cursor      #d7dff9
+
+#define ok_black         #3c474d
+#define ok_light_black   #868d80
+#define ok_red           #df5b61
+#define ok_green         #87c7a1
+#define ok_yellow        #de8f78
+#define ok_darker_blue   #5d87bf
+#define ok_contrast_blue #628cc4
+#define ok_blue          #6791c9
+#define ok_magenta       #bc83e3
+#define ok_cyan          #70b9cc
+#define ok_white         #868d80
+
+*.foreground:   ok_fg
+*.background:   ok_bg
+*.cursorColor:  ok_cursor
+*fading: 35
+
+*.color0: ok_black
+*.color1: ok_red
+*.color2: ok_green
+*.color3: ok_yellow
+*.color4: ok_blue
+*.color5: ok_magenta
+*.color6: ok_cyan
+*.color7: ok_white
+
+*.color8: ok_light_black
+*.color9: ok_red
+*.color10: ok_green
+*.color11: ok_yellow
+*.color12: ok_blue
+*.color13: ok_magenta
+*.color14: ok_cyan
+*.color15: ok_white

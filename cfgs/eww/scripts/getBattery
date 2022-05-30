@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Get actual battery status using acpi
+
+status=$(acpi -b | awk '{ print $3 }' | sed 's/\,//g')
+percentage=$(acpi -b | awk '{ print $4 }' | sed 's/\,//g')
+
+echo $status $percentage

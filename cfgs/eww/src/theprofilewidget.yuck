@@ -1,0 +1,31 @@
+(defpoll hostname :interval "120s" "cat /etc/hostname")
+(defpoll user :interval "120s" "whoami")
+
+(defwidget outer-window []
+    (box))
+(defwidget profile []
+    (box :orientation "h"
+         :space-evenly "true"
+
+        (box :class "pfp")
+        (box :class "text" :orientation "v"
+             :space-evenly "true"
+
+            (box :class "welcome" "Hello!")
+            (box :class "username" "${user} in ${hostname}")
+        )
+    )
+)
+
+(defwindow outer-window
+    :geometry (geometry :x "73px"
+                        :y "13px"
+                        :width "300px"
+                        :height "162px")
+        (outer-window))
+    (defwindow profile
+        :geometry (geometry :x "4%"
+                            :y "40px"
+                            :width "320px"
+                            :height "120px")
+        (profile))

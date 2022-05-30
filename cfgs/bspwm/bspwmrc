@@ -1,0 +1,47 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Workspaces
+bspc monitor -d 1 2 3 4 5 6
+
+# Border
+bspc config border_width          10 
+
+# Gaps
+bspc config window_gap            12
+bspc config split_ratio           0.5
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
+bspc config focus_follows_pointer true
+
+# Border Colors
+bspc config focused_border_color "#1b1f20"
+bspc config presel_feedback_color "#d8b4bd"
+bspc config left_padding 60
+
+
+# Close left bar when fullscreen
+bspc subscribe node_state | while read -r _ _ _ _ state flag; do
+  if [ "$state" != "fullscreen" ]; then
+    continue
+  fi
+  if [ "$flag" == on ]; then
+    bspc config left_padding 0
+    eww -c ~/.config/eww close bar
+  else
+    bspc config left_padding 65
+    eww -c ~/.config/eww open bar
+  fi
+done &
+
+
+# Auto start stuff
+xrdb merge ~/.Xresources
+~/.local/bin/brdr &
+xsetroot -cursor_name left_ptr &
+eww open bar &
+picom &
+xfce4-power-manager &
+setxkbmap es &
+nitrogen --restore &

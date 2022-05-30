@@ -1,0 +1,351 @@
+  // Variables
+  $bg: #0b0d10;
+  $bgSecondary: #0b0d10;
+  $bgSecondaryAlt: #0b0d10;
+  $fg: #d2daf4;
+  $blue: #84a0c6;
+  $blue-desaturated: rgb(117, 140, 176);
+  $background: #0b0d10;
+  $red: #c44949;
+  $green: #66A182;
+  $white: #d2daf4; /* Foreground  */
+  $dark-gray: #636c7e;
+  // Gruvbox colors
+  $gb-bg0: #282828;
+  $gb-bg0-hard: #1d2021;
+  $gb-bg0-soft: #32302f;
+  $gb-bg1: #3c3836;
+  $gb-bg2: #504945;
+  $gb-bg3: #665c54;
+  $gb-bg4: #7c6f64;
+
+  // Dark Foreground
+  $gb-fg0: #fbf1c7;
+  $gb-fg1: #ebdbb2;
+  $gb-fg2: #d5c4a1;
+  $gb-fg3: #bdae93;
+  $gb-fg4: #a89984;
+
+  // Dark Colors
+  $gb-red: #cc241d;
+  $gb-green: #98971a;
+  $gb-yellow: #d79921;
+  $gb-blue: #458588;
+  $gb-purple: #b16286;
+  $gb-aqua: #689d6a;
+  $gb-orange: #d65d0e;
+  $gb-gray: #928374;
+
+  * {
+    all: unset;
+    font-family: feather;
+    font-family: VictorMono Nerd Font;
+    border-radius: 7px;
+  }
+  window {
+    color: $fg;
+    font-family: "VictorMono Nerd Font";
+}
+
+  .bar_class {
+    background-color: $background;
+    border-radius: 16px;
+}
+
+  .works {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0px 0px 0px 5px;
+    background-color: $background;
+    }
+    
+    .works:hover {
+      color: $blue;
+    }
+    .0 , .01, .02, .03, .04, .05, .06,
+    .011, .022, .033, .044, .055, .066{
+      margin: 0px 10px 0px 0px;
+    }
+    
+    /* Unoccupied */
+    .0 {
+    color: #b5cdbd;
+    }
+    
+    .0:hover {
+      color: $blue;
+    }
+
+    /* Occupied */
+    .01, .02, .03, .04, .05, .06 {
+      color: 	$blue;
+    }
+    
+    
+    /* Focused */
+    .011, .022, .033, .044, .055, .066 {
+      color: $red;
+    }
+
+    .bar_class {
+        background-color: $background;
+        border-radius: 16px;
+    }
+    
+    .time-hour {
+        font-size: 18px;
+        color: $green;
+      }
+      
+      .time-minute {
+        font-size: 18px;
+        color: $green;
+      }
+
+      .launcher-class {
+        margin-left: 4px;
+        font-size: 1.5em;
+        color: #c44949;
+        min-height: 39px;
+        min-width: 15px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-image: url("./assets/pfp.png");
+        background-size: 100%;
+        margin-top: 10px;
+    }
+
+    .outer-window, .outer-wind, .outer-window-big, .outer-window-music {
+      background-color: $background;
+      border-radius: 10%;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+  }
+
+.profile {
+        border: 0px solid $red;
+    .pfp {
+        background-image: url("./assets/pfp.png");
+        background-size: 100%;
+        border-radius: 50%;
+
+        margin: 20px 40px 20px 40px;
+    }
+
+    .text {
+        border: 0px;
+        margin: 20px -20px;
+        margin-left: -65px;
+
+        .welcome, .username {
+            font-size: 18px;
+            font-style: italic;
+        }
+        
+        .username {
+            border: 0px;
+            font-size: 18px;
+            color: $blue-desaturated;
+        }    
+    }
+}
+
+
+.launch-btn{
+  color: $blue;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
+
+.launch-btn:hover{
+  color: $blue-desaturated
+}
+
+.open-btn{
+  color: $red;
+  padding-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+
+.line {
+  background-color: $white;
+  border-radius: 50px;
+}
+
+
+.musicbox {
+  .art {
+    margin: 3px;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 15px;
+    min-height: 45px;
+  }
+}
+
+.separator {
+  background-color: $background;
+  color: $white;
+}
+
+.stats {
+  margin: 30px;
+}
+
+.ram-usage{
+  padding-top: 1.5px;
+  font-size: 24px;
+  border-left: 3px $blue solid;
+  border-radius: 7px;
+}
+
+.ram-usage-text{
+  font-size: 18px;
+}
+
+.ram-icon{
+  padding: 10px;
+  color: $blue;
+}
+
+.ram-progress{
+  color: $green;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin: 5px;
+}
+
+
+
+/* Original Author: Vermoot */
+/* Original dotfiles: https://github.com/Vermoot/dotfiles/ */
+
+.volume-spacer, .menu-spacer {
+  transition: all 200ms cubic-bezier(.1,-0.00,.0,1.49);
+}
+
+.volume-widget {
+  background-color: $bg;
+  // background-color: red;
+  border: 2px solid $blue;
+  border-radius: 12px;
+  padding: 0px 10px 0px;
+  min-height: 32px;
+}
+
+.volume-icon {
+  font-size: 28px;
+  margin: 0 6px 0;
+}
+
+.volume-icon-muted {
+  color: $red;
+}
+
+.volume-slider {
+  background-color: $gb-fg1;
+  // padding: 1px;
+  border-radius: 4px;
+  margin: 16px 0px 16px;
+  contents {
+    trough {
+      // padding-top: 3px;
+      border-radius:5px;
+      slider {
+        background: transparent;
+      }
+      highlight {
+        background: $red;
+        padding: 3px;
+        border-radius:4px;
+      }
+    }
+  }
+}
+
+.volume-slider-muted {
+  background-color: $bg;
+  contents {
+    trough {
+      highlight {
+        background: $bg;
+      }
+    }
+  }
+}
+
+.bright-box {
+  margin: 10px 7px;
+    .content {
+      font-size: 11px;
+      background-color: #0e1013;
+      border-radius: 8px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      padding-right: 5px;
+
+      &.bright {
+        color: $red;
+        border-left: solid $red 2px;
+      }
+    }
+}
+
+.network-mngr-box {
+  margin: 10px 7px;
+    .content {
+      font-size: 11px;
+      background-color: #0e1013;
+      border-radius: 8px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      padding-right: 5px;
+
+      &.disconnected {
+        color: $red;
+        border-left: solid $red 2px;
+      }
+
+      &.connected {
+        color: $green;
+        border-left: solid $green 2px;
+      }
+    }
+}
+
+.volume-box {
+  margin: 10 7px;
+    .content {
+      font-size: 11px;
+      background-color: #0e1013;
+      border-radius: 8px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      padding-right: 5px;
+      color: $blue;
+      border-left: solid $blue 2px;
+  }
+}
+
+.battery-box {
+  margin: 1 7px;
+    .content {
+      font-size: 11px;
+      background-color: #0e1013;
+      border-radius: 8px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      padding-right: 5px;
+      color: $dark-gray;
+      border-left: solid $dark-gray 2px;
+  }
+}

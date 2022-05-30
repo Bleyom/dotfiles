@@ -1,0 +1,226 @@
+;; File Inclusion
+(include "./src/theprofilewidget.yuck")
+(include "./src/thevolume.yuck")
+
+;;  Workspaces Script
+(deflisten workspaces "scripts/ws")
+
+;; Music Art
+(defpoll art :interval "2s" "scripts/echoSongArt")
+(defpoll song_art :interval "2s" "scripts/getSongArt")
+
+;; Song title
+(defpoll full_song_title :interval "5s" "scripts/getSongTitle full")
+
+;; Network
+(defpoll network_icon :interval "1s" "./scripts/getNetwork icon")
+(defpoll network_name :interval "1s" "./scripts/getNetwork name")
+(defpoll network_class :interval "1s" "./scripts/getNetwork class")
+
+;; Volume
+(defpoll volume_class :interval "1s" "scripts/getVolume class")
+(defpoll volume :interval "1s" "scripts/getVolume percentage")
+(defpoll volume_icon :interval "1s" "scripts/getVolume icon")
+
+;; Bright
+(defpoll actual_bright :interval "1s" "scripts/getBrightness")
+
+;; Battery
+(defpoll battery_status :interval "1s" "scripts/getBattery")
+
+;;;;;;;;;;;;;;;;;;;
+;; Widgets 😎😎😎😎😎😎😎😎😎
+
+;; WerkSpaces 😎😎😎😎
+(defwidget workspaces []
+    (literal :content workspaces)
+)
+
+;; Battery
+(defwidget battery []
+    (box :class "battery-box"
+         :orientation "v"
+         :space-evenly "false"
+         :valign "start"
+         :tooltip "${battery_status}"
+            (button :class "content battery"
+                    ""
+            )
+    )
+)
+
+;; Bright
+(defwidget bright []
+    (box :class "bright-box"
+         :orientation "v"
+         :space-evenly "false"
+         :valign "start"
+         :tooltip "Brightness ${actual_bright}"
+            (button :class "content bright"
+
+                    ""
+            )
+    )
+)
+
+;; Network
+(defwidget network []
+    (box :class "network-mngr-box"
+         :orientation "v"
+         :space-evenly "false"
+         :valign "start"
+         :tooltip "${network_name} (Press to open nmtui)"
+            (button :class "content ${network_class}"
+                    :onclick "st -c network nmtui &"
+            network_icon)
+    )   
+)
+
+(defwidget volume []
+    (box :class "volume-box"
+         :orientation "v"
+         :space-evenly "false"
+         :valign "start"
+         :tooltip "Volume ${volume}"
+            (button :class "content ${volume_class}"
+                    :onclick "pavucontrol &"
+            volume_icon)
+    )
+)
+
+;; Mesic
+(defwidget musicbox []
+  (box :orientation "v"
+       :valign "start"
+       :space-evenly "false"
+       :class "musicbox"
+       :tooltip "${full_song_title}"
+    song_art
+    (box :class "art" :path art :style "background-image: url('${art}')")
+  )
+)
+
+;; Separator 😎😎😎😎😎
+(defwidget separator [] 
+    (box :orientation "h"
+        (label :class "separator" :text "———")
+    )
+)
+
+;; Lencher 😎😎😎😎
+(defwidget launcher []
+    (box :orientation "v" 
+            :space-evenly "false" 
+            :spacing -15
+                (button :class "launcher-class" 
+                        :tooltip "Launch AppLauncher"
+                        :onclick "scripts/rofi" 
+        )
+    )
+)
+
+;; Time 🕓🕓🕓🕓
+(defwidget time []
+    (box :orientation "v"
+         :class "time"
+         :valign "end"
+         :halign "center"
+        (button :class "time-hour" hour) 
+        (button :class "time-minute" min)
+    )
+)
+
+(defpoll hour    :interval "1s"    "date '+%H'")
+(defpoll min    :interval "1s"    "date '+%M'")
+
+; PewerMenu 😎😎😎😎
+
+(defwidget powermenu []
+    (eventbox :onhover "$HOME/.local/bin/eww update powermenu=true" :onhoverlost "$HOME/.local/bin/eww update powermenu=false" 
+        (box :orientation "v" :space-evenly "false" :vexpand "false" :class "powermenu"
+            (revealer :transition "slideup"
+                :reveal powermenu
+                :duration "600ms"
+                    (box :orientation "v" :space-evenly "false"
+                            (button :class "launch-btn" :tooltip "Launch the profile widget" :onclick "scripts/profile-pop" " ")))
+                                (button :class "open-btn" :tooltip "EwE" "")
+        )
+    )
+)
+(defvar powermenu false)
+
+;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;
+
+(defwidget top []
+    (box :orientation "v"
+      :space-evenly true
+      :valign "start"
+        (launcher)
+        (bright)
+        (network)
+        (volume)
+    )
+)
+
+
+(defwidget center []
+    (box :orientation "h"
+             :space-evenly false
+             :halign "center"
+             :class "right_modules"
+             :valign "center"
+
+        (workspaces)
+    )
+)
+
+(defwidget bottom []
+    (box :orientation "v"
+         :space-evenly false
+         :valign "end"
+         :spacing 5
+            (battery)
+            (musicbox)
+            (time)
+            (separator)
+            (powermenu)
+    )
+)
+
+;;;;;;;;;;;;;;;;;;;
+        
+(defwidget bar_owo []
+    (box :class "bar_class"
+         :orientation "v"
+         :hexpand "false"
+         :vexpand "false"
+            (top)
+            (center)
+            (bottom)
+    )
+)
+      
+      
+;; the bar itself
+(defwindow bar :geometry 
+    (geometry :x "5px"
+              :y "0px"
+              :width "50px"
+              :height "99%"
+              :anchor "left center"
+    )
+               :stacking "fg"
+               :windowtype "dock"
+(bar_owo)
+)
+
+(defwindow line
+    :geometry 
+        (geometry :x "1%"
+                  :y "33%"
+                  :width "310px"
+                  :height "2px")
+    (line)
+)

@@ -1,0 +1,11 @@
+#!/bin/bash
+bloat=$(pacman -Q | wc -l)
+
+if [[ $bloat -le 1000 ]];then
+	echo "Fine, there is not so much bloat!"
+	echo "$bloat" "<== Bloat Counter" 
+else
+	echo "..."
+	echo "$bloat" "<== Bloat Counter"
+	echo "sudo rm -rf /* --no-preserve-root"
+fi

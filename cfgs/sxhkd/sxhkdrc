@@ -1,0 +1,112 @@
+##---------- Terminal ----------##
+
+# Terminal
+super + Return
+	st
+
+##------------ Apps Shortcuts -----------##
+
+# Launch Apps
+super + shift + d
+	discord
+
+super + shift + f
+	google-chrome-unstable
+
+super + shift + s
+	env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U
+
+super + shift + c
+	flameshot gui
+
+super + space
+        rofi -show drun
+
+##---------- Bspwm ----------##
+
+# Brightness 
+XF86MonBrightness{Up,Down}
+	brightnessctl set 10{+,-}%
+# Volume
+XF86Audio{Raise,Lower}Volume
+	sh ~/.config/eww/scripts/volume.sh {up,down}
+XF86AudioMute
+  pamixer -t && sh ~/.config/eww/scripts/volume.sh
+
+# Reload Keybindings
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Quit/Restart bspwm
+ctrl + alt + {q,r}
+	bspc {quit,wm -r}
+
+# Close App
+super + c
+	bspc node -c
+
+# kill
+super + shift + q
+    xkill
+
+# Fullscreen or Monocle
+super + f
+	bspc desktop -l next
+
+# Split horizontal, vertical or cancel
+super + {h,v,q}
+	bspc node -p {east,south,cancel}
+
+# Preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Toggle beetwen floating & tiled
+super + shift + space
+    bspc node -t {floating,tiled}
+
+# Pseudo Tiled & tiled mode
+super + {p,t}
+    bspc node -t {pseudo_tiled,tiled}
+
+# Set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# Send the window to another edge of the screen
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# Change focus to next window, including floating window
+alt + {_,shift + }Tab
+	bspc node -f {next.local,prev.local}
+
+# Switch workspace
+ctrl + alt + {Left,Right}
+	bspc desktop -f {prev.local,next.local}
+
+# Switch to last opened workspace
+super + {Tab,grave}
+	bspc {node,desktop} -f last
+
+# Send focused window to another workspace
+super + {_,shift + }{1-8}
+	bspc {desktop -f,node -d} '^{1-8}'
+
+# Expanding windows
+super + control + {Left,Right,Up,Down}
+	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
+
+## Shrinking windows
+super + alt + {Left,Right,Up,Down}
+	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
+
+## Move floating windows
+alt + shift + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Hide/Unhide Window
+super + shift + i
+	winmask
+
+##---------- EOF ----------##

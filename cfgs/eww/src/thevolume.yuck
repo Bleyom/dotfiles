@@ -1,0 +1,36 @@
+;; Original Author: Vermoot
+;; Original dotfiles: https://github.com/Vermoot/dotfiles/
+
+    (defvar volume-hidden false)
+    (defvar volume-level 50)
+    (defvar volume-muted false)
+    (defwindow volume
+      :monitor 0
+      :geometry (geometry :y "100px" :x "0px" :width "250px" :height "200px" :anchor "center bottom")
+      :windowtype "dock"
+      :wm-ignore true
+      :stacking "fg"
+      (box :class "volume-window"
+           :orientation "v"
+           :space-evenly "false"
+        (box :class "volume-spacer" :style {volume-hidden ? "padding-top: 1px;" : "padding-top: 30px;"})
+        (box :class "volume-widget"
+             :orientation "h"
+             :space-evenly false
+             :spacing 10
+          (label :text {volume-muted ? "" : 
+                        volume-level == 0 ? "" : 
+                        volume-level < 32 ? "" : 
+                        volume-level < 65 ? "" : 
+                        ""}
+                        
+                 :class 'volume-icon ${volume-muted ? "volume-icon-muted" : ""}'
+          )
+          (scale :class 'volume-slider ${volume-muted ? "volume-slider-muted" : ""}'
+                 :hexpand "true"
+                 :min 0
+                 :max 100
+                 :height 10
+                 :marks true
+                 :value volume-level
+                 :onchange "pamixer --set-volume {}"))))
