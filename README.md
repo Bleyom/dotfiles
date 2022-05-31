@@ -3,9 +3,9 @@
 ![blur_img](https://i.imgur.com/HSSL8DR.png)
 
 <p align="center">
-<a href="#setup"><img width="150px" style="padding: 5 10px;" src="https://i.imgur.com/30jbp1p.png"></a>
-<a href="#gallery"><img width="150px" style="padding: 5 10px;" src="https://i.imgur.com/p7PCbLv.png"></a>
-<a href="#info"><img width="150px" style="padding: 5 10px;" src="https://i.imgur.com/BqgEZFt.png"></a>
+<a href="#info-"><img width="150px" style="padding: 5 10px;" src="https://i.imgur.com/BqgEZFt.png"></a>
+<a href="#setup-"><img width="150px" style="padding: 5 10px;" src="https://i.imgur.com/30jbp1p.png"></a>
+<a href="#-gallery"><img width="150px" style="padding: 5 10px;" src="https://i.imgur.com/p7PCbLv.png"></a>
   
   
 ### Repo Info
