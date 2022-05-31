@@ -128,6 +128,7 @@ chmod +x ./cfgs/eww/scripts/*
 
 - [Leo](https://github.com/justleoo) Orginal Bar
 - [AlphaTechnolog](https://github.com/AlphaTechnolog) A lot of help 🧑‍🚀
+- [makima_hater_69](https://github.com/mluna711) Nvim config 🚲
 - [Le moot](https://github.com/Vermoot) Eww Volume Notification/Widget
 - [Saimoomedits](https://github.com/saimoomedits) Ok Theme
 - [~~Akali~~ Artik](https://github.com/AkaliRep) Feedback
