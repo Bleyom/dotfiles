@@ -46,7 +46,7 @@
 
 ⚠️ **This instructions just work for Arch Linux and others Arch Based Distributions**
 
-> Install git (for clone the repositorie)
+> Install git (for clone the repository)
 ```sh
 sudo pacman -S git --noconfirm
 ```
