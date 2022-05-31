@@ -141,8 +141,8 @@ chmod +x ./cfgs/eww/scripts/*
 - [Fluffy Bean](https://github.com/Fluffy-Bean) Feedback
 - [ItzCuteAkemi](https://github.com/ItzCuteAkemi) Feedback
 - [N3ko](https://github.com/N3k0Ch4n) Feedback
-- Dawnt (Dawnt#0359)
-- iktdts (iktdts#0007)
+- Dawnt (Dawnt#0359) Feedback
+- iktdts (iktdts#0007) Feedback
 - Wilver (Wilver#7456) Feedback
 - wenanoshe (wenanoshe#5241) Feedback
 - andres715_.ts (andres715_.ts#5722) Feedback
