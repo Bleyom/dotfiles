@@ -12,10 +12,10 @@
   
 <h1>
   <a href="#--------">
-    <img alt="" align="left" src="https://img.shields.io/github/stars/Bleyom/dots?color=c5c8c9&labelColor=0B0F10&style=for-the-badge"/>
+    <img alt="" align="left" src="https://img.shields.io/github/stars/Bleyom/dotfiles?color=c5c8c9&labelColor=0B0F10&style=for-the-badge"/>
   </a>
   <a href="#--------">
-    <img alt="" align="right" src="https://badges.pufler.dev/visits/Bleyom/dots?color=c5c8c9&labelColor=0B0F10&style=for-the-badge"/>
+    <img alt="" align="right" src="https://badges.pufler.dev/visits/Bleyom/dotfiles?color=c5c8c9&labelColor=0B0F10&style=for-the-badge"/>
   </a>
 </h1>
 </br>
