@@ -175,4 +175,4 @@ chmod +x ./cfgs/eww/scripts/*
 - ByLeonel (ByLeonel#6893) Feedback
 - JamsMendez (JamsMendez#1523) Feedback
 - MATERIAOSCURA (MATERIAOSCURA#1799) Feedback
-- Usan (Usan#8033)
+- Usan (Usan#8033) I don't remember what he did but he has done something
