@@ -61,8 +61,8 @@ makepkg -si --noconfirm
 > Install necessary dependencies
 ```sh
 paru -S picom rofi acpi acpi_call flameshot jq \
-playerctl light gpick brightnessctl bspwm sxhkd \
-starship fish neofetch pamixer alsa-utils dunst \
+playerctl light gpick brightnessctl bspwm gcc base base-devel sxhkd \
+starship fish neofetch pamixer alsa-utils pkgconf dunst \
 nerd-fonts-complete --noconfirm --needed
 ```
 
