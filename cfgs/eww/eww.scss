@@ -10,31 +10,6 @@
   $green: #66A182;
   $white: #d2daf4; /* Foreground  */
   $dark-gray: #636c7e;
-  // Gruvbox colors
-  $gb-bg0: #282828;
-  $gb-bg0-hard: #1d2021;
-  $gb-bg0-soft: #32302f;
-  $gb-bg1: #3c3836;
-  $gb-bg2: #504945;
-  $gb-bg3: #665c54;
-  $gb-bg4: #7c6f64;
-
-  // Dark Foreground
-  $gb-fg0: #fbf1c7;
-  $gb-fg1: #ebdbb2;
-  $gb-fg2: #d5c4a1;
-  $gb-fg3: #bdae93;
-  $gb-fg4: #a89984;
-
-  // Dark Colors
-  $gb-red: #cc241d;
-  $gb-green: #98971a;
-  $gb-yellow: #d79921;
-  $gb-blue: #458588;
-  $gb-purple: #b16286;
-  $gb-aqua: #689d6a;
-  $gb-orange: #d65d0e;
-  $gb-gray: #928374;
 
   * {
     all: unset;
@@ -248,7 +223,7 @@
 }
 
 .volume-slider {
-  background-color: $gb-fg1;
+  background-color: $white;
   // padding: 1px;
   border-radius: 4px;
   margin: 16px 0px 16px;
