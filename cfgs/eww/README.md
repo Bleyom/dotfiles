@@ -17,3 +17,6 @@
 
 ## How to change colors
 ![HowToChange](https://i.imgur.com/rKXgrVc.png)
+
+### Thanks For Read ^^
+![Thanks](https://i.imgur.com/KSjvgq0.png)
