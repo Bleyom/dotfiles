@@ -14,3 +14,6 @@
 ![HowToCallScript](https://i.imgur.com/A0fP33y.png)
 ### Result
 ![Result](https://i.imgur.com/5pI9Lae.png)
+
+## How to change colors
+![HowToChange](https://i.imgur.com/rKXgrVc.png)
