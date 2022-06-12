@@ -172,7 +172,7 @@ chmod +x ./cfgs/eww/scripts/*
 - 0bfxgh0st (0bfxgh0st#7013) Feedback
 - dlltsuki (dlltsuki#4387) Feedback
 - 7dxip (7dxip#6666) Feedback
-- ByLeonel (ByLeonel#6893) Feedback
+- ByLeonel ([ByLeonel#6893](https://github.com/ByDog3r)) Feedback
 - JamsMendez (JamsMendez#1523) Feedback
 - MATERIAOSCURA (MATERIAOSCURA#1799) Feedback
 - Usan (Usan#8033) I don't remember what he did but he has done something
