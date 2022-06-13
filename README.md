@@ -69,12 +69,12 @@ nerd-fonts-complete --noconfirm --needed
 <b>2. Install config</b>
 > **Clone repositorie**
 ```sh
-git clone https://github.com/Bleyom/dots
+git clone https://github.com/Bleyom/dotfiles
 ```
 
 > **cd into directory**
 ```
-cd dots
+cd dotfiles
 ```
 > **Make executable some files**
 ```
