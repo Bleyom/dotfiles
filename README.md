@@ -90,6 +90,8 @@ chmod +x ./cfgs/eww/scripts/*
  > **Copy the config**
  ```sh
  cd ./../..
+ mkdir -p ~/.local/bin/
+ cp ./bin/* ~/.local/bin
  cp -r ./cfgs/* ~/.config
  cp -r ./Xresources ~/.Xresources
  ```
