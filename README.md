@@ -62,7 +62,7 @@ makepkg -si --noconfirm
 ```sh
 paru -S picom rofi acpi acpi_call flameshot jq \
 playerctl light gpick brightnessctl bspwm gcc base base-devel sxhkd \
-starship fish neofetch pamixer alsa-utils pkgconf dunst \
+starship fish neofetch pamixer exa wmutils-git alsa-utils pkgconf dunst \
 nerd-fonts-complete --noconfirm --needed
 ```
 
